@@ -1,0 +1,144 @@
+/* ===================================================
+   Estilo do site - Jornada nas Estrelas (fã-site)
+   Regras fixas do usuário:
+   - Nunca fundo escuro
+   - Nunca negrito
+   - Nunca sublinhado
+   - Fontes grandes (baixa visão)
+   - Compatível com Windows 7 / navegadores comuns
+   =================================================== */
+
+:root{
+  --azul-frota:      #14406b;   /* azul "Frota Estelar", usado só em textos/bordas */
+  --azul-claro:      #eaf2fb;   /* fundo claro com leve tom azul */
+  --dourado:         #b8860b;   /* dourado, para destaques e links */
+  --vermelho-cmd:    #8c2f2f;   /* vermelho comando, só para acentos pequenos */
+  --fundo:           #ffffff;   /* fundo geral, sempre claro */
+  --fundo-lateral:   #f4f7fa;   /* fundo da barra lateral, claro */
+  --texto:           #1a1a1a;   /* texto quase preto sobre fundo claro */
+  --borda:           #c7d3e0;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: Verdana, Arial, "Segoe UI", sans-serif;
+  font-size: 20px;          /* base grande */
+  line-height: 1.6;
+}
+
+a{
+  color: var(--azul-frota);
+  text-decoration: none;     /* nunca sublinhado */
+  border-bottom: 3px solid transparent;
+  padding-bottom: 1px;
+}
+a:hover, a:focus{
+  color: var(--dourado);
+  border-bottom: 3px solid var(--dourado); /* destaque sem sublinhar */
+}
+
+/* ---------- Barra superior ---------- */
+.topo{
+  background: var(--azul-claro);
+  border-bottom: 4px solid var(--dourado);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topo .logo{
+  font-size: 28px;
+  color: var(--azul-frota);
+  letter-spacing: 1px;
+}
+.topo .busca input{
+  font-size: 18px;
+  padding: 8px;
+  border: 2px solid var(--borda);
+  background: #ffffff;
+  color: var(--texto);
+}
+.faixa-anuncio-topo{
+  background: #fdf6e3;
+  border-bottom: 1px solid var(--borda);
+  text-align: center;
+  padding: 6px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ---------- Layout geral: lateral + conteúdo ---------- */
+.envelope{
+  display: flex;
+  align-items: flex-start;
+}
+
+.lateral{
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--fundo-lateral);
+  border-right: 3px solid var(--borda);
+  padding: 18px 0;
+  min-height: 80vh;
+}
+.lateral h2{
+  font-size: 19px;
+  color: var(--vermelho-cmd);
+  margin: 18px 18px 6px 18px;
+}
+.lateral ul{
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+.lateral li a{
+  display: block;
+  padding: 8px 18px;
+  font-size: 18px;
+  color: var(--texto);
+}
+.lateral li a:hover{
+  background: #ffffff;
+  color: var(--dourado);
+}
+.lateral .sub{
+  padding-left: 30px;
+  font-size: 16px;
+}
+
+.conteudo{
+  flex: 1;
+  padding: 30px 40px;
+  max-width: 900px;
+}
+
+.conteudo aside.anuncio{
+  border: 1px dashed var(--borda);
+  background: #fdf6e3;
+  text-align: center;
+  padding: 18px;
+  margin: 24px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape{
+  background: var(--azul-claro);
+  border-top: 3px solid var(--borda);
+  padding: 16px 24px;
+  font-size: 15px;
+  color: #444;
+  text-align: center;
+}
+
+@media (max-width: 800px){
+  .envelope{ flex-direction: column; }
+  .lateral{ width: 100%; border-right: none; border-bottom: 3px solid var(--borda); min-height: auto; }
+  .conteudo{ padding: 20px; }
+}
