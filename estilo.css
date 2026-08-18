@@ -130,6 +130,9 @@ a:hover, a:focus{
 }
 .contato-rapido a,
 .contato-rapido button{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 15px;
   color: var(--azul-frota);
   background: none;
@@ -138,6 +141,11 @@ a:hover, a:focus{
   padding: 4px 2px;
   cursor: pointer;
   font-family: inherit;
+}
+.contato-rapido svg{
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 .contato-rapido a:hover,
 .contato-rapido button:hover{
