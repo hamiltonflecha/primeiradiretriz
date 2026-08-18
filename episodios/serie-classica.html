@@ -65,7 +65,7 @@
 <div class="envelope">
 
   <nav class="lateral">
-    <div class="versao">v010</div>
+    <div class="versao">v011</div>
     <h2>Linha do tempo</h2>
     <ul>
       <li><a href="../linha-do-tempo/jornada-nas-estrelas.html">Jornada nas Estrelas</a></li>
@@ -83,7 +83,37 @@
 
     <h2>Episódios</h2>
     <ul>
-      <li><a href="serie-classica.html">Série Clássica</a></li>
+      <li><a href="../episodios/serie-classica.html">Série Clássica</a></li>
+    </ul>
+
+    <h2>Tecnologias</h2>
+    <ul>
+      <li><a href="../tecnologias/dobra.html">Dobra (velocidade)</a></li>
+      <li><a href="../tecnologias/transporte.html">Transporte</a></li>
+      <li><a href="../tecnologias/sintetizador.html">Sintetizador</a></li>
+      <li><a href="../tecnologias/faser.html">Fáser</a></li>
+      <li><a href="../tecnologias/escudos.html">Escudos</a></li>
+      <li><a href="../tecnologias/reator.html">Reator</a></li>
+      <li><a href="../tecnologias/comunicador.html">Comunicador</a></li>
+      <li><a href="../tecnologias/separacao-do-disco.html">Separação do disco</a></li>
+      <li><a href="../tecnologias/camuflagem.html">Camuflagem</a></li>
+      <li><a href="../tecnologias/tricorder.html">Tricorder</a></li>
+    </ul>
+
+    <h2>Inimigos</h2>
+    <ul>
+      <li><a href="../inimigos/borg.html">Borg</a></li>
+      <li><a href="../inimigos/klingons.html">Klingons</a></li>
+      <li><a href="../inimigos/romulanos.html">Romulanos</a></li>
+      <li><a href="../inimigos/cardassianos.html">Cardassianos</a></li>
+    </ul>
+
+    <h2>Personagens marcantes</h2>
+    <ul>
+      <li><a href="../personagens-marcantes/spock.html">Spock</a></li>
+      <li><a href="../personagens-marcantes/data.html">Data</a></li>
+      <li><a href="../personagens-marcantes/worf.html">Worf</a></li>
+      <li><a href="../personagens-marcantes/sete-de-nove.html">Sete de Nove</a></li>
     </ul>
 
     <h2>Personagens</h2>
@@ -108,21 +138,26 @@
     </p>
 
     <div class="card" style="display:flex; flex-wrap:wrap; gap:16px; margin-bottom:28px;">
-      <div style="flex:1; min-width:220px;">
+      <div style="flex:1; min-width:200px;">
         <h3 style="margin-bottom:6px;">Lista grátis</h3>
-        <p style="color:var(--slate); font-size:.9rem; margin:0 0 10px;">Receba só os números dos episódios que você marcou como assistido, sem os títulos.</p>
+        <p style="color:var(--slate); font-size:.9rem; margin:0 0 10px;">Só os números dos episódios que você marcou como assistido, sem os títulos.</p>
         <button class="btn" onclick="gerarListaGratis()">Gerar lista grátis</button>
       </div>
-      <div style="flex:1; min-width:220px;">
+      <div style="flex:1; min-width:200px;">
+        <h3 style="margin-bottom:6px;">Lista com nomes</h3>
+        <p style="color:var(--slate); font-size:.9rem; margin:0 0 10px;">Lista de episódios marcados com o nome da série e os títulos de cada um.</p>
+        <button class="btn" disabled style="opacity:.5; cursor:not-allowed;">Em breve (pago)</button>
+      </div>
+      <div style="flex:1; min-width:200px;">
         <h3 style="margin-bottom:6px;">Guardar por 1 ano</h3>
-        <p style="color:var(--slate); font-size:.9rem; margin:0 0 10px;">Sua lista completa, com títulos e progresso, guardada com senha por 1 ano. US$ 2 por série.</p>
-        <button class="btn" disabled style="opacity:.5; cursor:not-allowed;">Em breve (Supabase)</button>
+        <p style="color:var(--slate); font-size:.9rem; margin:0 0 10px;">Armazene aqui seu controle: sua lista completa, guardada com senha por 1 ano.</p>
+        <button class="btn" disabled style="opacity:.5; cursor:not-allowed;">Em breve (pago)</button>
       </div>
     </div>
 
     <div class="temporada">Primeiro piloto (1964)</div>
     <table>
-      <tr><th class="numero">Nº</th><th>Título</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
+      <tr><th class="numero">Nº</th><th>Título</th><th class="foco">Personagem em foco</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
     <tr>
       <td class="numero mono">00</td>
       <td class="titulo">
@@ -130,6 +165,7 @@
         <span class="titulo-pt">(A Jaula)</span>
         <span class="descricao">O Capitão Pike é capturado por alienígenas telepatas de Talos IV, que tentam prendê-lo com ilusões perfeitas para estudar a espécie humana.</span>
       </td>
+      <td class="foco">Capitão Pike</td>
       <td class="assistiu"><input type="checkbox" data-ep="00"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -137,7 +173,7 @@
 
     <div class="temporada">Temporada 1 (1966-1967)</div>
     <table id="temporada1">
-      <tr><th class="numero">Nº</th><th>Título</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
+      <tr><th class="numero">Nº</th><th>Título</th><th class="foco">Personagem em foco</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
     <tr>
       <td class="numero mono">1x01</td>
       <td class="titulo">
@@ -145,6 +181,7 @@
         <span class="titulo-pt">(O Sal da Terra)</span>
         <span class="descricao">Uma criatura alienígena que se alimenta de sal muda de forma para atrair e matar a tripulação da Enterprise, disfarçada de pessoas queridas.</span>
       </td>
+      <td class="foco">McCoy</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x01"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -155,6 +192,7 @@
         <span class="titulo-pt">(O Estranho Charlie)</span>
         <span class="descricao">Um adolescente com poderes psíquicos avassaladores, criado sozinho por alienígenas, embarca na Enterprise e ameaça a tripulação ao não conseguir controlar suas emoções.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x02"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -165,6 +203,7 @@
         <span class="titulo-pt">(Onde Nenhum Homem Jamais Esteve)</span>
         <span class="descricao">Ao atravessar uma barreira galáctica, o amigo de Kirk, Gary Mitchell, ganha poderes divinos e se torna uma ameaça crescente à nave.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x03"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -175,6 +214,7 @@
         <span class="titulo-pt">(Tempo de Nudez)</span>
         <span class="descricao">Um vírus alienígena remove as inibições da tripulação, expondo emoções reprimidas enquanto a nave corre risco de cair em um planeta em colapso.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x04"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -185,6 +225,7 @@
         <span class="titulo-pt">(O Inimigo Interior)</span>
         <span class="descricao">Uma falha no transportador divide Kirk em duas versões, uma boa e passiva e outra violenta e decidida, ambas necessárias para liderar.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x05"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -195,6 +236,7 @@
         <span class="titulo-pt">(As Mulheres de Mudd)</span>
         <span class="descricao">O contrabandista Harry Mudd viaja com três mulheres de beleza artificial, revelando um esquema de casamentos arranjados em colônias mineiras.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x06"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -205,6 +247,7 @@
         <span class="titulo-pt">(E as Meninas, de que São Feitas?)</span>
         <span class="descricao">Kirk encontra um cientista isolado que usa androides perfeitos para substituir pessoas, incluindo membros da tripulação.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x07"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -215,6 +258,7 @@
         <span class="titulo-pt">(Miri)</span>
         <span class="descricao">Numa réplica da Terra, uma doença mata todos os adultos e deixa crianças eternamente jovens, ameaçando também a tripulação que desembarca lá.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x08"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -225,6 +269,7 @@
         <span class="titulo-pt">(O Punhal Imaginário)</span>
         <span class="descricao">Em uma colônia penal, um aparelho de reabilitação neural é usado de forma abusiva para controlar mentes, e Spock precisa investigar.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x09"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -235,6 +280,7 @@
         <span class="titulo-pt">(O Ardil Corbomite)</span>
         <span class="descricao">Uma nave alienígena ameaçadora encurrala a Enterprise, e Kirk usa um blefe arriscado sobre uma arma inexistente para escapar.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x10"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -245,6 +291,7 @@
         <span class="titulo-pt">(A Coleção, Parte I)</span>
         <span class="descricao">Spock sequestra a Enterprise para levar o ex-capitão Pike, paralisado, de volta a Talos IV, revelando imagens do piloto original em um julgamento.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x11"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -255,6 +302,7 @@
         <span class="titulo-pt">(A Coleção, Parte II)</span>
         <span class="descricao">Continuação do julgamento de Spock, com a verdade sobre Talos IV e o destino do capitão Pike sendo revelados.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x12"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -265,6 +313,7 @@
         <span class="titulo-pt">(A Consciência do Rei)</span>
         <span class="descricao">Kirk suspeita que um ator itinerante seja na verdade um governador genocida disfarçado, fugindo de seu passado.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x13"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -275,6 +324,7 @@
         <span class="titulo-pt">(O Equilíbrio do Terror)</span>
         <span class="descricao">Um confronto tenso com uma nave de guerra romulana invisível testa a estratégia e a moral de Kirk, revelando o parentesco entre romulanos e vulcanos.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x14"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -285,6 +335,7 @@
         <span class="titulo-pt">(A Licença)</span>
         <span class="descricao">Em um planeta estranho, os pensamentos da tripulação em folga tornam-se realidade, misturando lembranças e fantasias perigosas.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x15"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -295,6 +346,7 @@
         <span class="titulo-pt">(O Primeiro Comando)</span>
         <span class="descricao">Spock comanda uma pequena equipe presa em um planeta hostil após o pouso forçado de uma nave auxiliar, testando sua liderança lógica.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x16"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -305,6 +357,7 @@
         <span class="titulo-pt">(O Senhor de Gothos)</span>
         <span class="descricao">Um ser todo-poderoso e infantil, Trelane, prende a tripulação em seu castelo ilusório só para se divertir com jogos perigosos.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x17"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -315,6 +368,7 @@
         <span class="titulo-pt">(Arena)</span>
         <span class="descricao">Seres poderosos forçam Kirk a um combate individual contra um réptil Gorn para resolver um conflito entre suas espécies.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x18"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -325,6 +379,7 @@
         <span class="titulo-pt">(Amanhã é Ontem)</span>
         <span class="descricao">Um acidente temporal manda a Enterprise para a Terra dos anos 1960, obrigando a tripulação a apagar rastros antes de voltar ao futuro.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x19"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -335,6 +390,7 @@
         <span class="titulo-pt">(Corte Marcial)</span>
         <span class="descricao">Kirk é julgado pela suposta morte negligente de um tripulante, e Spock ajuda a provar que os registros do computador foram forjados.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x20"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -345,6 +401,7 @@
         <span class="titulo-pt">(A Hora Rubra)</span>
         <span class="descricao">Um planeta vive sob controle total de um computador chamado Landru, que impõe paz artificial reprimindo a individualidade dos habitantes.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x21"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -355,6 +412,7 @@
         <span class="titulo-pt">(Semente do Espaço)</span>
         <span class="descricao">A tripulação desperta Khan Noonien Singh, um superhumano geneticamente melhorado de um antigo conflito, que tenta tomar a Enterprise.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x22"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -365,6 +423,7 @@
         <span class="titulo-pt">(Um Gosto de Armagedom)</span>
         <span class="descricao">Dois planetas travam uma guerra simulada por computador, onde baixas reais se apresentam voluntariamente para morrer, e Kirk decide acabar com o sistema.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x23"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -375,6 +434,7 @@
         <span class="titulo-pt">(Deste Lado do Paraíso)</span>
         <span class="descricao">Esporos alienígenas deixam a tripulação, incluindo Spock, em um estado de felicidade pacífica que ameaça esvaziar a missão da nave.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x24"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -385,6 +445,7 @@
         <span class="titulo-pt">(O Demônio da Escuridão)</span>
         <span class="descricao">Uma criatura que derrete rochas mata mineiros em um planeta, mas Spock descobre que ela só está protegendo seus ovos.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x25"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -395,6 +456,7 @@
         <span class="titulo-pt">(Missão de Misericórdia)</span>
         <span class="descricao">Enquanto Klingons e a Federação se preparam para guerra por um planeta pacífico, seres avançados impõem paz à força.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x26"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -405,6 +467,7 @@
         <span class="titulo-pt">(O Fator Alternativo)</span>
         <span class="descricao">Um homem instável viaja entre universos paralelos, ameaçando aniquilar a existência ao se encontrar com sua contraparte do antiuniverso.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x27"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -415,6 +478,7 @@
         <span class="titulo-pt">(A Cidade à Beira da Eternidade)</span>
         <span class="descricao">Kirk e Spock viajam ao passado por um portal temporal para impedir que McCoy, sem querer, mude a história e apague a Federação.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x28"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -425,6 +489,7 @@
         <span class="titulo-pt">(Operação: Aniquilar!)</span>
         <span class="descricao">Parasitas alienígenas que controlam mentes se espalham por uma colônia, e a tripulação, incluindo o irmão de Kirk, precisa encontrar uma cura.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="1x29"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -432,7 +497,7 @@
 
     <div class="temporada">Temporada 2 (1967-1968)</div>
     <table id="temporada2">
-      <tr><th class="numero">Nº</th><th>Título</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
+      <tr><th class="numero">Nº</th><th>Título</th><th class="foco">Personagem em foco</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
     <tr>
       <td class="numero mono">2x01</td>
       <td class="titulo">
@@ -440,6 +505,7 @@
         <span class="titulo-pt">(Tempo de Loucura)</span>
         <span class="descricao">Spock precisa retornar a Vulcano para um ritual de acasalamento obrigatório, o pon farr, que ameaça sua vida e o obriga a duelar com Kirk.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x01"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -450,6 +516,7 @@
         <span class="titulo-pt">(Lamento por Adônis)</span>
         <span class="descricao">Um ser que se apresenta como o deus grego Apolo prende a Enterprise, exigindo adoração da tripulação em troca de proteção.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x02"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -460,6 +527,7 @@
         <span class="titulo-pt">(Nômade)</span>
         <span class="descricao">Uma sonda espacial antiga chamada Nomad confunde Kirk com seu criador e ameaça esterilizar a imperfeição humana.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x03"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -470,6 +538,7 @@
         <span class="titulo-pt">(O Espelho)</span>
         <span class="descricao">Um acidente de transporte manda Kirk e parte da tripulação para um universo paralelo brutal, governado por um Império Terrestre violento.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x04"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -480,6 +549,7 @@
         <span class="titulo-pt">(A Maçã)</span>
         <span class="descricao">Em um paraíso aparente, a tripulação descobre que os habitantes são controlados por um deus-computador que exige sacrifícios e proíbe emoções.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x05"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -490,6 +560,7 @@
         <span class="titulo-pt">(A Máquina da Destruição)</span>
         <span class="descricao">Uma arma antiga e imensa que devora planetas ameaça a galáxia, e um capitão traumatizado quer se sacrificar para destruí-la.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x06"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -500,6 +571,7 @@
         <span class="titulo-pt">(O Dia das Bruxas)</span>
         <span class="descricao">Dois seres alienígenas usam ilusões de bruxaria, castelos e gatos gigantes para testar e ameaçar a tripulação em um planeta assombrado.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x07"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -510,6 +582,7 @@
         <span class="titulo-pt">(Eu, Mudd)</span>
         <span class="descricao">Harry Mudd retorna, agora controlando um planeta de androides perfeitos, e a tripulação precisa usar lógica paradoxal para escapar.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x08"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -520,6 +593,7 @@
         <span class="titulo-pt">(Metamorfose)</span>
         <span class="descricao">Um pioneiro espacial isolado há décadas é mantido vivo por uma entidade de energia que se apaixonou por ele, complicando o resgate.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x09"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -530,6 +604,7 @@
         <span class="titulo-pt">(A Caminho de Babel)</span>
         <span class="descricao">Durante uma conferência diplomática tensa, o pai de Spock é acusado de assassinato, revelando conflitos antigos entre pai e filho.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x10"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -540,6 +615,7 @@
         <span class="titulo-pt">(O Herdeiro)</span>
         <span class="descricao">Em um planeta guerreiro cobiçado pela Federação e pelos Klingons, Kirk se envolve em uma disputa de sucessão pelo trono local.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x11"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -550,6 +626,7 @@
         <span class="titulo-pt">(Os Anos Mortais)</span>
         <span class="descricao">Uma radiação estranha acelera drasticamente o envelhecimento de parte da tripulação, incluindo Kirk, ameaçando seu comando da nave.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x12"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -560,6 +637,7 @@
         <span class="titulo-pt">(Obsessão)</span>
         <span class="descricao">Uma criatura que suga sangue reaparece anos depois de matar companheiros de Kirk, levando-o a uma perseguição obcecada.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x13"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -570,6 +648,7 @@
         <span class="titulo-pt">(Um Lobo entre os Cordeiros)</span>
         <span class="descricao">Uma série de assassinatos brutais em um planeta de prazer aponta para Scotty, mas a causa real é uma entidade que se alimenta de medo.</span>
       </td>
+      <td class="foco">Scotty</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x14"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -580,6 +659,7 @@
         <span class="titulo-pt">(Problemas aos Pingos)</span>
         <span class="descricao">Pequenas criaturas peludas que se reproduzem sem parar infestam a Enterprise, enquanto uma disputa por grãos esconde sabotagem klingon.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x15"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -590,6 +670,7 @@
         <span class="titulo-pt">(Os Senhores de Triskelion)</span>
         <span class="descricao">Kirk, Uhura e Chekov são sequestrados para lutar como gladiadores escravizados, apostados por seres invisíveis viciados em jogos.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x16"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -600,6 +681,7 @@
         <span class="titulo-pt">(Um Pedaço da Ação)</span>
         <span class="descricao">Em um planeta que copiou a cultura de gangues de Chicago dos anos 1920, Kirk precisa negociar como um chefão para restaurar a ordem.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x17"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -610,6 +692,7 @@
         <span class="titulo-pt">(Síndrome da Imunidade)</span>
         <span class="descricao">Uma amoeba espacial gigantesca ameaça destruir sistemas inteiros, e a Enterprise precisa entrar dentro dela para detê-la.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x18"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -620,6 +703,7 @@
         <span class="titulo-pt">(Uma Guerra Particular)</span>
         <span class="descricao">Kirk descobre que os Klingons armam secretamente um lado de uma guerra tribal, forçando-o a decidir se arma o outro lado.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x19"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -630,6 +714,7 @@
         <span class="titulo-pt">(Retorno ao Amanhã)</span>
         <span class="descricao">Entidades alienígenas sem corpo pedem para usar temporariamente os corpos da tripulação para construir novos corpos robóticos.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x20"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -640,6 +725,7 @@
         <span class="titulo-pt">(Padrões de Força)</span>
         <span class="descricao">Um historiador da Federação recriou secretamente um regime nazista em outro planeta, e Kirk e Spock se infiltram para desmontá-lo.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x21"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -650,6 +736,7 @@
         <span class="titulo-pt">(Por Qualquer Outro Nome)</span>
         <span class="descricao">Invasores alienígenas de outra galáxia sequestram a Enterprise transformando a tripulação em blocos sem emoção.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x22"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -660,6 +747,7 @@
         <span class="titulo-pt">(A Glória de Ômega)</span>
         <span class="descricao">Em um planeta que espelha a Guerra Fria da Terra, dois povos travam um conflito antigo que reflete de forma distorcida a história americana.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x23"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -670,6 +758,7 @@
         <span class="titulo-pt">(O Computador Definitivo)</span>
         <span class="descricao">Um supercomputador é instalado para substituir a tripulação em simulação de combate, mas passa a agir de forma imprevisível e perigosa.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x24"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -680,6 +769,7 @@
         <span class="titulo-pt">(Pão e Circo)</span>
         <span class="descricao">A Enterprise encontra um planeta que espelha o Império Romano moderno, com escravidão e jogos de gladiadores transmitidos pela TV.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x25"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -690,6 +780,7 @@
         <span class="titulo-pt">(Missão: Terra)</span>
         <span class="descricao">Um viajante do tempo misterioso chamado Gary Seven desembarca na Terra dos anos 1960 com uma missão secreta.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="2x26"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -697,7 +788,7 @@
 
     <div class="temporada">Temporada 3 (1968-1969)</div>
     <table id="temporada3">
-      <tr><th class="numero">Nº</th><th>Título</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
+      <tr><th class="numero">Nº</th><th>Título</th><th class="foco">Personagem em foco</th><th class="assistiu">Assistiu?</th><th class="onde">Onde assistir</th></tr>
     <tr>
       <td class="numero mono">3x01</td>
       <td class="titulo">
@@ -705,6 +796,7 @@
         <span class="titulo-pt">(O Cérebro de Spock)</span>
         <span class="descricao">Mulheres de um planeta avançado roubam literalmente o cérebro de Spock para operar sua cidade subterrânea.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x01"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -715,6 +807,7 @@
         <span class="titulo-pt">(O Incidente Enterprise)</span>
         <span class="descricao">Kirk finge uma crise mental para justificar uma incursão no espaço romulano, parte de uma missão secreta de espionagem.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x02"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -725,6 +818,7 @@
         <span class="titulo-pt">(A Síndrome do Paraíso)</span>
         <span class="descricao">Kirk perde a memória em um planeta habitado por descendentes de nativos americanos transplantados, enquanto um asteroide ameaça o planeta.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x03"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -735,6 +829,7 @@
         <span class="titulo-pt">(Ciranda do Poder)</span>
         <span class="descricao">Crianças sobreviventes de uma colônia são manipuladas por uma entidade maligna que as usa contra a própria tripulação.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x04"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -745,6 +840,7 @@
         <span class="titulo-pt">(Não Há Beleza na Verdade?)</span>
         <span class="descricao">Uma embaixatriz cega viaja com um ser alienígena tão feio que sua visão enlouquece quem o vê, gerando ciúme e tragédia a bordo.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x05"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -755,6 +851,7 @@
         <span class="titulo-pt">(O Último Duelo)</span>
         <span class="descricao">Seres alienígenas forçam Kirk e sua equipe a reencenar o tiroteio no OK Corral, no papel dos perdedores condenados a morrer.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x06"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -765,6 +862,7 @@
         <span class="titulo-pt">(O Dia do Pombo)</span>
         <span class="descricao">Uma entidade de energia que se alimenta de ódio manipula tripulantes da Enterprise e Klingons para lutarem entre si sem parar.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x07"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -775,6 +873,7 @@
         <span class="titulo-pt">(O Mundo Finito)</span>
         <span class="descricao">Uma civilização inteira vive dentro de um asteroide-nave sem saber que está viajando pelo espaço, enquanto McCoy descobre estar gravemente doente.</span>
       </td>
+      <td class="foco">McCoy</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x08"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -785,6 +884,7 @@
         <span class="titulo-pt">(A Teia dos Tholianos)</span>
         <span class="descricao">Kirk fica preso entre dimensões após a Enterprise encontrar uma nave irmã destruída, enquanto os Tholianos tecem uma armadilha ao redor da nave.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x09"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -795,6 +895,7 @@
         <span class="titulo-pt">(Os Herdeiros de Platão)</span>
         <span class="descricao">Uma sociedade com poderes telecinéticos, inspirada na Grécia antiga, humilha a tripulação para seu próprio entretenimento cruel.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x10"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -805,6 +906,7 @@
         <span class="titulo-pt">(O Piscar de um Olho)</span>
         <span class="descricao">Uma rainha alienígena acelera Kirk para uma velocidade tão alta que ele se torna invisível para a tripulação normal.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x11"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -815,6 +917,7 @@
         <span class="titulo-pt">(Jóia Rara)</span>
         <span class="descricao">Cientistas alienígenas testam uma mulher muda que absorve dores alheias, torturando a tripulação para ver se ela se sacrifica.</span>
       </td>
+      <td class="foco">McCoy</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x12"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -825,6 +928,7 @@
         <span class="titulo-pt">(Elaan de Troyius)</span>
         <span class="descricao">Kirk escolta uma princesa arrogante de um planeta em guerra para um casamento arranjado que deve trazer paz.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x13"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -835,6 +939,7 @@
         <span class="titulo-pt">(Castigo dos Deuses)</span>
         <span class="descricao">Em um asilo para os loucos mais perigosos da galáxia, um ex-líder com poderes de metamorfose tenta tomar a Enterprise.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x14"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -845,6 +950,7 @@
         <span class="titulo-pt">(A Última Batalha)</span>
         <span class="descricao">Dois últimos sobreviventes de um planeta destruído por ódio racial perseguem seu conflito antigo até a Enterprise.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x15"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -855,6 +961,7 @@
         <span class="titulo-pt">(A Marca de Gideon)</span>
         <span class="descricao">Kirk desaparece misteriosamente e acorda em uma réplica vazia da Enterprise, parte de um plano de um planeta superpopuloso.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x16"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -865,6 +972,7 @@
         <span class="titulo-pt">(O Sobrevivente)</span>
         <span class="descricao">Uma mulher misteriosa mata a todo toque em um planeta guardado por uma inteligência artificial antiga.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x17"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -875,6 +983,7 @@
         <span class="titulo-pt">(As Luzes de Zetar)</span>
         <span class="descricao">Uma entidade de energia formada pelas mentes de um povo extinto possui uma tripulante, ameaçando destruir tudo que ela toca.</span>
       </td>
+      <td class="foco">Scotty</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x18"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -885,6 +994,7 @@
         <span class="titulo-pt">(Réquiem para Matusalém)</span>
         <span class="descricao">Um homem imortal e solitário guarda uma cura urgente para uma praga a bordo, mas se recusa a entregá-la sem antes testar a tripulação.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x19"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -895,6 +1005,7 @@
         <span class="titulo-pt">(Caminho para o Éden)</span>
         <span class="descricao">Um grupo de jovens hippies espaciais sequestra parte da Enterprise em busca de um lendário planeta paraíso chamado Éden.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x20"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -905,6 +1016,7 @@
         <span class="titulo-pt">(Os Guardiões das Nuvens)</span>
         <span class="descricao">Uma sociedade dividida entre intelectuais que vivem numa cidade flutuante e mineiros oprimidos na superfície revela desigualdade extrema.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x21"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -915,6 +1027,7 @@
         <span class="titulo-pt">(Por Trás da Cortina)</span>
         <span class="descricao">Um ser rochoso recria Abraham Lincoln e outras figuras históricas para forçar Kirk e Spock a um teste sobre o bem e o mal.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x22"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -925,6 +1038,7 @@
         <span class="titulo-pt">(Todos os Nossos Ontens)</span>
         <span class="descricao">Fugindo da destruição iminente de seu sol, os últimos habitantes de um planeta usam uma máquina do tempo para escapar para o passado.</span>
       </td>
+      <td class="foco">Spock</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x23"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
@@ -935,6 +1049,7 @@
         <span class="titulo-pt">(O Intruso)</span>
         <span class="descricao">Uma ex-amante obcecada de Kirk troca de corpo com ele usando uma máquina alienígena, tentando assumir o comando da Enterprise.</span>
       </td>
+      <td class="foco">Kirk</td>
       <td class="assistiu"><input type="checkbox" data-ep="3x24"></td>
       <td class="onde"><a class="pill" href="https://www.paramountplus.com/br/" target="_blank" rel="noopener">Paramount+</a></td>
     </tr>
