@@ -5,21 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Star Trek: Prodigy (2021) - Jornada nas Estrelas</title>
 <link rel="stylesheet" href="../estilo.css">
+<link rel="icon" type="image/png" href="../favicon.png">
 </head>
 <body>
 
 <div class="faixa-anuncio-topo">Espaço publicitário (topo)</div>
 
 <header class="topo">
-  <div class="logo"><a href="../index.html" style="color:inherit;">Jornada nas Estrelas</a></div>
+  <div class="marca">
+    <span class="logo-icone" aria-hidden="true">
+      <svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2,20 L44,2 L20,44 L15,28 Z" fill="none" stroke="#14406b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M15,28 L23,21" fill="none" stroke="#14406b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <div class="logo">Jornada nas Estrelas</div>
+  </div>
   <div class="busca">
     <input type="text" placeholder="Buscar no site...">
   </div>
 </header>
 
+<nav class="menu-principal">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="index.html">Linha do Tempo</a></li>
+    <li><a href="index.html">Séries</a></li>
+    <li><a href="../personagens/index.html">Personagens</a></li>
+    <li><a href="../tecnologias.html">Tecnologias</a></li>
+    <li><a href="../onde-assistir/brasil.html">Onde assistir</a></li>
+    <li><a href="../controle.html">Controle</a></li>
+    <li><a href="../votacoes.html">Votações</a></li>
+  </ul>
+  <div class="contato-rapido">
+    <a class="whatsapp" href="https://wa.me/5531991271321" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 3c-.6 0-1 .4-1 1v2.2C5 13.8 11.2 20 18.8 20H21c.6 0 1-.4 1-1v-3.1c0-.5-.3-.9-.8-1l-3.2-.8c-.4-.1-.8 0-1.1.3l-1.1 1.1c-2-1-3.6-2.6-4.6-4.6l1.1-1.1c.3-.3.4-.7.3-1.1L11.9 3.8c-.1-.5-.5-.8-1-.8H6z" fill="#ffffff"/>
+      </svg>
+    </a>
+    <a class="email" href="mailto:dev-io@outlook.com" aria-label="E-mail">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+        <path d="M4 6.5l8 6.2 8-6.2" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+      </svg>
+    </a>
+    <button type="button" class="compartilhar" onclick="compartilharSite()" aria-label="Compartilhar">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="5" r="2.4" fill="#ffffff"/>
+        <circle cx="6" cy="12" r="2.4" fill="#ffffff"/>
+        <circle cx="18" cy="19" r="2.4" fill="#ffffff"/>
+        <line x1="8.2" y1="10.7" x2="15.8" y2="6.3" stroke="#ffffff" stroke-width="1.7"/>
+        <line x1="8.2" y1="13.3" x2="15.8" y2="17.7" stroke="#ffffff" stroke-width="1.7"/>
+      </svg>
+    </button>
+  </div></nav>
+
+
+
+
+
 <div class="envelope">
 
-  <nav class="lateral">
+<nav class="lateral">
+    <div class="versao">v010</div>
     <h2>Linha do tempo</h2>
     <ul>
       <li><a href="jornada-nas-estrelas.html">Jornada nas Estrelas</a></li>
@@ -35,6 +83,11 @@
       <li><a href="starfleet-academy.html">Starfleet Academy</a></li>
     </ul>
 
+    <h2>Episódios</h2>
+    <ul>
+      <li><a href="../episodios/serie-classica.html">Série Clássica</a></li>
+    </ul>
+
     <h2>Personagens</h2>
     <ul>
       <li><a href="../personagens/index.html">Todos os personagens</a></li>
@@ -48,6 +101,7 @@
   </nav>
 
   <main class="conteudo">
+
 
     <h1>Star Trek: Prodigy (2021)</h1>
 
@@ -98,13 +152,28 @@
       </form>
     </section>
 
-  </main>
+    </main>
 
 </div>
 
 <footer class="rodape">
   Fã-site não oficial sobre Jornada nas Estrelas. Star Trek é marca registrada da Paramount/CBS.
 </footer>
+
+<script>
+function compartilharSite(){
+  var url = window.location.href;
+  if(navigator.share){
+    navigator.share({ title: document.title, url: url });
+  } else if(navigator.clipboard){
+    navigator.clipboard.writeText(url).then(function(){
+      alert('Link copiado: ' + url);
+    });
+  } else {
+    prompt('Copie o link abaixo:', url);
+  }
+}
+</script>
 
 </body>
 </html>
