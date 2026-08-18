@@ -1,52 +1,63 @@
 /* ===================================================
    Estilo do site - Jornada nas Estrelas (fã-site)
-   Regras fixas do usuário:
-   - Nunca fundo escuro
-   - Nunca negrito
-   - Nunca sublinhado
-   - Fontes grandes (baixa visão)
-   - Compatível com Windows 7 / navegadores comuns
+   Redesign inspirado no visual do SMSMass (Fraunces / Inter / IBM Plex Mono),
+   com o verde trocado por azul a pedido do usuário.
+   Regra aberta por decisão explícita do usuário: negrito e sublinhado
+   são permitidos aqui, diferente da versão anterior do site.
    =================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 :root{
-  --azul-frota:      #14406b;   /* azul "Frota Estelar", usado só em textos/bordas */
-  --azul-claro:      #eaf2fb;   /* fundo claro com leve tom azul */
-  --dourado:         #b8860b;   /* dourado, para destaques e links */
-  --vermelho-cmd:    #8c2f2f;   /* vermelho comando, só para acentos pequenos */
-  --fundo:           #ffffff;   /* fundo geral, sempre claro */
-  --fundo-lateral:   #f4f7fa;   /* fundo da barra lateral, claro */
-  --texto:           #1a1a1a;   /* texto quase preto sobre fundo claro */
-  --borda:           #c7d3e0;
+  --paper:          #F7F5F0;
+  --paper-dim:      #EFEBE3;
+  --navy:           #14406b;   /* mantém o azul-frota original do site */
+  --slate:          #5B6B73;
+  --azul:           #1c6fb0;   /* substitui o verde-sinal do smsmass */
+  --azul-bright:    #2f8fd9;
+  --dourado:        #b8860b;   /* mantém o dourado original do site */
+  --dourado-bg:     #FBE8D5;
+  --line:           #D8D2C4;
+  --texto:          #14406b;
+  --borda:          #D8D2C4;
 }
 
 *{ box-sizing: border-box; }
 
+html{ scroll-behavior: smooth; }
+
 html, body{
   margin:0;
   padding:0;
-  background: var(--fundo);
+  background: var(--paper);
   color: var(--texto);
-  font-family: Verdana, Arial, "Segoe UI", sans-serif;
-  font-size: 20px;          /* base grande */
-  line-height: 1.6;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  line-height: 1.55;
 }
 
+h1, h2, h3{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 .4em;
+}
+
+.mono{ font-family: 'IBM Plex Mono', monospace; }
+
 a{
-  color: var(--azul-frota);
-  text-decoration: none;     /* nunca sublinhado */
-  border-bottom: 3px solid transparent;
-  padding-bottom: 1px;
+  color: var(--azul);
+  text-decoration: none;
 }
 a:hover, a:focus{
-  color: var(--dourado);
-  border-bottom: 3px solid var(--dourado); /* destaque sem sublinhar */
+  color: var(--azul-bright);
+  text-decoration: underline;
 }
 
 /* ---------- Barra superior ---------- */
 .topo{
-  background: var(--azul-claro);
-  border-bottom: 4px solid var(--dourado);
-  padding: 14px 24px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,11 +67,11 @@ a:hover, a:focus{
 .topo .marca{
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 .topo .logo-icone{
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
   display: block;
 }
@@ -70,30 +81,37 @@ a:hover, a:focus{
   display: block;
 }
 .topo .logo{
-  font-size: 28px;
-  color: var(--azul-frota);
-  letter-spacing: 1px;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: .02em;
+  color: var(--navy);
 }
 .topo .busca input{
-  font-size: 18px;
-  padding: 8px;
-  border: 2px solid var(--borda);
+  font-family: 'Inter', sans-serif;
+  font-size: .95rem;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
   background: #ffffff;
-  color: var(--texto);
+  color: var(--navy);
 }
 .faixa-anuncio-topo{
-  background: #fdf6e3;
-  border-bottom: 1px solid var(--borda);
+  background: var(--paper-dim);
+  border-bottom: 1px solid var(--line);
   text-align: center;
-  padding: 6px;
-  font-size: 15px;
-  color: #555;
+  padding: 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .78rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--slate);
 }
 
-/* ---------- Menu principal (abaixo da barra superior) ---------- */
+/* ---------- Menu principal ---------- */
 .menu-principal{
-  background: #ffffff;
-  border-bottom: 3px solid var(--borda);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
   padding: 10px 24px;
   display: flex;
   flex-wrap: wrap;
@@ -107,20 +125,21 @@ a:hover, a:focus{
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px 6px;
+  gap: 6px 20px;
 }
 .menu-principal ul li a{
   display: inline-block;
-  padding: 6px 12px;
-  font-size: 16px;
-  color: var(--azul-frota);
-  border-bottom: 3px solid transparent;
+  padding: 6px 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: .95rem;
+  color: var(--slate);
+  border-bottom: 2px solid transparent;
 }
 .menu-principal ul li a:hover,
 .menu-principal ul li a:focus{
-  color: var(--dourado);
-  border-bottom: 3px solid var(--dourado);
-  background: var(--azul-claro);
+  color: var(--azul);
+  border-bottom: 2px solid var(--azul-bright);
+  text-decoration: none;
 }
 .contato-rapido{
   display: flex;
@@ -135,14 +154,14 @@ a:hover, a:focus{
   justify-content: center;
   width: 34px;
   height: 34px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-.contato-rapido a.whatsapp{ background: #25a35a; }
-.contato-rapido a.email{ background: #2377c9; }
-.contato-rapido button.compartilhar{ background: #6b7785; }
+.contato-rapido a.whatsapp{ background: #1fa855; }
+.contato-rapido a.email{ background: var(--azul); }
+.contato-rapido button.compartilhar{ background: var(--slate); }
 .contato-rapido svg{
   width: 19px;
   height: 19px;
@@ -151,9 +170,6 @@ a:hover, a:focus{
 .contato-rapido a:hover,
 .contato-rapido button:hover{
   opacity: 0.85;
-}
-@media (max-width: 800px){
-  .menu-principal{ flex-direction: column; align-items: flex-start; }
 }
 
 /* ---------- Layout geral: lateral + conteúdo ---------- */
@@ -165,21 +181,24 @@ a:hover, a:focus{
 .lateral{
   width: 260px;
   flex-shrink: 0;
-  background: var(--fundo-lateral);
-  border-right: 3px solid var(--borda);
+  background: var(--paper-dim);
+  border-right: 1px solid var(--line);
   padding: 18px 0;
   min-height: 80vh;
 }
 .lateral .versao{
-  font-size: 12px;
-  color: #8a97a6;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .72rem;
+  color: var(--slate);
   padding: 0 18px 12px 18px;
-  border-bottom: 1px solid var(--borda);
+  border-bottom: 1px solid var(--line);
   margin-bottom: 8px;
 }
 .lateral h2{
-  font-size: 16px;
-  color: var(--vermelho-cmd);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navy);
   margin: 16px 18px 6px 18px;
 }
 .lateral ul{
@@ -190,46 +209,50 @@ a:hover, a:focus{
 .lateral li a{
   display: block;
   padding: 6px 18px;
-  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
   color: var(--texto);
 }
 .lateral li a:hover{
   background: #ffffff;
-  color: var(--dourado);
+  color: var(--azul);
+  text-decoration: none;
 }
 .lateral .sub{
   padding-left: 30px;
-  font-size: 13px;
+  font-size: .82rem;
 }
 
 .conteudo{
   flex: 1;
-  padding: 30px 40px;
+  padding: 34px 40px;
   max-width: 900px;
 }
 
 .conteudo aside.anuncio{
-  border: 1px dashed var(--borda);
-  background: #fdf6e3;
-  text-align: center;
-  padding: 18px;
+  border-left: 3px solid var(--dourado);
+  background: var(--dourado-bg);
+  padding: 14px 18px;
   margin: 24px 0;
-  font-size: 15px;
-  color: #555;
+  border-radius: 0 4px 4px 0;
+  font-size: .9rem;
+  color: #6b5427;
 }
 
 /* ---------- Rodapé ---------- */
 .rodape{
-  background: var(--azul-claro);
-  border-top: 3px solid var(--borda);
-  padding: 16px 24px;
-  font-size: 15px;
-  color: #444;
+  background: var(--paper-dim);
+  border-top: 1px solid var(--line);
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: .85rem;
+  color: var(--slate);
   text-align: center;
 }
 
 @media (max-width: 800px){
+  .menu-principal{ flex-direction: column; align-items: flex-start; }
   .envelope{ flex-direction: column; }
-  .lateral{ width: 100%; border-right: none; border-bottom: 3px solid var(--borda); min-height: auto; }
+  .lateral{ width: 100%; border-right: none; border-bottom: 1px solid var(--line); min-height: auto; }
   .conteudo{ padding: 20px; }
 }
