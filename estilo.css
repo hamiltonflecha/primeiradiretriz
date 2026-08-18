@@ -320,6 +320,11 @@ td.numero{
   color: var(--slate);
   font-size: .85rem;
 }
+td.foco{
+  width: 110px;
+  font-size: .85rem;
+  color: var(--navy);
+}
 td.assistiu{
   width: 70px;
   text-align: center;
