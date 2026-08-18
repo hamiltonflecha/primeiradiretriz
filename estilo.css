@@ -250,6 +250,127 @@ a:hover, a:focus{
   text-align: center;
 }
 
+/* ---------- Formulário de comentários ---------- */
+.form-comentario label{
+  font-family: 'Inter', sans-serif;
+  font-size: .92rem;
+  color: var(--slate);
+}
+.form-comentario input[type="text"],
+.form-comentario textarea{
+  width: 100%;
+  max-width: 500px;
+  font-family: 'Inter', sans-serif;
+  font-size: .95rem;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--texto);
+}
+.btn{
+  display: inline-block;
+  background: var(--navy);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: .92rem;
+  cursor: pointer;
+  margin-top: 6px;
+}
+.btn:hover{
+  background: var(--azul);
+  text-decoration: none;
+}
+
+/* ---------- Tabela de episódios ---------- */
+.temporada{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin: 28px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 8px;
+}
+th, td{
+  text-align: left;
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th{
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-size: .72rem;
+  letter-spacing: .04em;
+  color: var(--slate);
+}
+td.numero{
+  width: 60px;
+  color: var(--slate);
+  font-size: .85rem;
+}
+td.assistiu{
+  width: 70px;
+  text-align: center;
+}
+td.assistiu input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+}
+td.onde{
+  width: 130px;
+}
+.titulo .titulo-original{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 1rem;
+}
+.titulo .titulo-pt{
+  font-family: 'Inter', sans-serif;
+  color: var(--slate);
+  font-size: .88rem;
+}
+.titulo .descricao{
+  display: block;
+  margin-top: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: .88rem;
+  color: var(--texto);
+  line-height: 1.5;
+}
+.pill{
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: .8rem;
+  color: var(--azul);
+  background: var(--paper);
+}
+.pill:hover{
+  border-color: var(--azul);
+  text-decoration: none;
+}
+.card{
+  background: var(--paper-dim);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 18px;
+}
+
 @media (max-width: 800px){
   .menu-principal{ flex-direction: column; align-items: flex-start; }
   .envelope{ flex-direction: column; }
