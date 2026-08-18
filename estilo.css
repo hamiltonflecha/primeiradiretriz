@@ -50,6 +50,18 @@ a:hover, a:focus{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.topo .marca{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.topo .logo-icone{
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 .topo .logo{
   font-size: 28px;
@@ -72,6 +84,64 @@ a:hover, a:focus{
   color: #555;
 }
 
+/* ---------- Menu principal (abaixo da barra superior) ---------- */
+.menu-principal{
+  background: #ffffff;
+  border-bottom: 3px solid var(--borda);
+  padding: 10px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.menu-principal ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+.menu-principal ul li a{
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 16px;
+  color: var(--azul-frota);
+  border-bottom: 3px solid transparent;
+}
+.menu-principal ul li a:hover,
+.menu-principal ul li a:focus{
+  color: var(--dourado);
+  border-bottom: 3px solid var(--dourado);
+  background: var(--azul-claro);
+}
+.contato-rapido{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+}
+.contato-rapido a,
+.contato-rapido button{
+  font-size: 15px;
+  color: var(--azul-frota);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 4px 2px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.contato-rapido a:hover,
+.contato-rapido button:hover{
+  color: var(--dourado);
+  border-bottom: 2px solid var(--dourado);
+}
+@media (max-width: 800px){
+  .menu-principal{ flex-direction: column; align-items: flex-start; }
+}
+
 /* ---------- Layout geral: lateral + conteúdo ---------- */
 .envelope{
   display: flex;
@@ -86,10 +156,17 @@ a:hover, a:focus{
   padding: 18px 0;
   min-height: 80vh;
 }
+.lateral .versao{
+  font-size: 12px;
+  color: #8a97a6;
+  padding: 0 18px 12px 18px;
+  border-bottom: 1px solid var(--borda);
+  margin-bottom: 8px;
+}
 .lateral h2{
-  font-size: 19px;
+  font-size: 16px;
   color: var(--vermelho-cmd);
-  margin: 18px 18px 6px 18px;
+  margin: 16px 18px 6px 18px;
 }
 .lateral ul{
   list-style: none;
@@ -98,8 +175,8 @@ a:hover, a:focus{
 }
 .lateral li a{
   display: block;
-  padding: 8px 18px;
-  font-size: 18px;
+  padding: 6px 18px;
+  font-size: 15px;
   color: var(--texto);
 }
 .lateral li a:hover{
@@ -108,7 +185,7 @@ a:hover, a:focus{
 }
 .lateral .sub{
   padding-left: 30px;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .conteudo{
