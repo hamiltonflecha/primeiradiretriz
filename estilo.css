@@ -382,3 +382,88 @@ td.onde{
   .lateral{ width: 100%; border-right: none; border-bottom: 1px solid var(--line); min-height: auto; }
   .conteudo{ padding: 20px; }
 }
+
+/* ===================================================
+   Votação por seção (like/dislike) - Supabase
+   =================================================== */
+.votacao{
+  margin: 32px 0 8px;
+  padding: 16px 18px;
+  background: var(--paper-dim);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.votacao-texto{
+  font-size: 1rem;
+  color: var(--slate);
+  margin-right: auto;
+}
+
+.voto-btn{
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid var(--borda);
+  background: #ffffff;
+  color: var(--texto);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.voto-btn:hover:not(:disabled){ border-color: var(--azul); }
+
+.voto-btn.votado{
+  border-color: var(--azul);
+  background: #eaf3fb;
+}
+
+.voto-btn:disabled{ cursor: default; opacity: .85; }
+
+.voto-contagem{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+}
+
+.votacao-aviso{
+  font-size: .9rem;
+  color: var(--slate);
+  width: 100%;
+}
+
+/* Votação compacta dentro da tabela de episódios */
+th.voto, td.voto{
+  text-align: center;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.voto-btn-mini{
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  font-size: .82rem;
+  padding: 5px 7px;
+  border-radius: 5px;
+  border: 1px solid var(--borda);
+  background: #ffffff;
+  color: var(--texto);
+  cursor: pointer;
+  margin: 1px;
+}
+
+.voto-btn-mini:hover:not(:disabled){ border-color: var(--azul); }
+
+.voto-btn-mini.votado{
+  border-color: var(--azul);
+  background: #eaf3fb;
+}
+
+.voto-btn-mini:disabled{ cursor: default; opacity: .85; }
+
+.voto-btn-mini .voto-contagem{ font-size: .78rem; }
