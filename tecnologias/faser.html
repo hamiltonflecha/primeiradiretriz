@@ -67,7 +67,7 @@
 <div class="envelope">
 
   <nav class="lateral">
-    <div class="versao">v012</div>
+    <div class="versao">v013</div>
     <h2>Linha do tempo</h2>
     <ul>
       <li><a href="../linha-do-tempo/jornada-nas-estrelas.html">Jornada nas Estrelas</a></li>
@@ -154,6 +154,13 @@
       escala muito maior.
     </p>
 
+    <div class="votacao" data-secao="{sid}">
+      <span class="votacao-texto">O que você achou deste conteúdo?</span>
+      <button type="button" class="voto-btn" data-tipo="like">👍 <span class="voto-contagem">0</span></button>
+      <button type="button" class="voto-btn" data-tipo="dislike">👎 <span class="voto-contagem">0</span></button>
+      <span class="votacao-aviso"></span>
+    </div>
+
   </main>
 
 </div>
@@ -177,5 +184,6 @@ function compartilharSite(){
 }
 </script>
 
+<script src="../votos.js"></script>
 </body>
 </html>
